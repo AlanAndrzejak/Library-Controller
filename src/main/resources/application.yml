@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: LibraryControllerApplication
+
+management:
+  info:
+    git:
+      enabled: true
+      mode: full
+  endpoints:
+    web:
+      exposure:
+        include: info, health, logfile
+
+logging:
+  file:
+    path: /var/log/controllers/
+    name: ${logging.file.path}library-controller.log
